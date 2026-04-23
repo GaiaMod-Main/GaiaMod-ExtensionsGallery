@@ -25,7 +25,7 @@
 
     // used for search
     let relUrl = $derived(props.relUrl);
-    const baseUrl = "https://studio.penguinmod.com/editor.html?extension=";
+    const baseUrl = "https://gaiamod-main.github.io/editor.html?extension=";
 
     /**
      * The button to copy the URL
@@ -114,11 +114,11 @@
         }
     };
     const handleEditorLoadFail = (err) => {
-        const event = new CustomEvent("penguinmod-editor-extension-load-failed", { detail: err });
+        const event = new CustomEvent("gaiamod-editor-extension-load-failed", { detail: err });
         document.dispatchEvent(event);
     };
     onMount(() => {
-        document.addEventListener("penguinmod-editor-extension-loaded", (event) => {
+        document.addEventListener("gaiamod-editor-extension-loaded", (event) => {
             if (url === event.detail) displayBubbleMessage(addToProjectPrompt);
         });
     });
@@ -137,14 +137,14 @@
         return displayedTags;
     });
     onMount(() => {
-        document.addEventListener("penguinmod-recommendation-clicked", (event) => {
+        document.addEventListener("gaiamod-recommendation-clicked", (event) => {
             const extCodeUrl = event.detail;
             if (!extCodeUrl) return;
             if (extCodeUrl === relUrl) {
                 copyToClipboard(url);
                 stateSearchBar.recommendations = [];
                 
-                const event = new CustomEvent("penguinmod-recommendations-updated");
+                const event = new CustomEvent("gaiamod-recommendations-updated");
                 document.dispatchEvent(event);
             }
         });
@@ -233,7 +233,7 @@
         {/if}
         {#if example}
             <p>
-                <a href={`https://studio.penguinmod.com/editor.html?project_url=${encodeURIComponent(`${$page.url.origin}/examples/projects/${example}`)}`}>
+                <a href={`https://studio.gaiamod.com/editor.html?project_url=${encodeURIComponent(`${$page.url.origin}/examples/projects/${example}`)}`}>
                     Example Project
                 </a>
             </p>
