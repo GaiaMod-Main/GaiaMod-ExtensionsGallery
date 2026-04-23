@@ -1,6 +1,6 @@
 <img
     src="/favicon.ico"
-    alt="PenguinMod Logo"
+    alt="GaiaMod Logo"
     class="logo"
 />
 

@@ -19,6 +19,7 @@ export default [
         code: "Gaia/GaiaAI.js",
         banner: "Gaia/gaiaai.png",
         creator: "Gaia",
+        isGitHub: true,
     },
     {
         name: 'Prompts',
@@ -26,6 +27,7 @@ export default [
         code: "Gaia/GTPPrompts.js",
         banner: "Gaia/prompts.png",
         creator: "Gaia",
+        isGitHub: true,
     },
     {
         name: 'Spinach Facts',
@@ -33,5 +35,6 @@ export default [
         code: "Gaia/SpinachFacts.js",
         banner: "Gaia/spinach.png",
         creator: "Gaia",
+        isGitHub: true,
     },
 ];

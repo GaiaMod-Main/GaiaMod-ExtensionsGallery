@@ -35,15 +35,15 @@
             try {
                 const loadedExtensionId = ExtensionLoader.handleWindowMessage(e);
                 if (loadedExtensionId) {
-                    const event = new CustomEvent("penguinmod-editor-extension-loaded", { detail: loadedExtensionId });
+                    const event = new CustomEvent("gaiamod-editor-extension-loaded", { detail: loadedExtensionId });
                     document.dispatchEvent(event);
                 }
             } catch (err) {
-                const event = new CustomEvent("penguinmod-editor-extension-load-failed", { detail: err });
+                const event = new CustomEvent("gaiamod-editor-extension-load-failed", { detail: err });
                 document.dispatchEvent(event);
             }
         });
-        document.addEventListener("penguinmod-editor-extension-load-failed", (event) => {
+        document.addEventListener("gaiamod-editor-extension-load-failed", (event) => {
             const err = event.detail;
             console.error("Error loading extension to editor;", err);
 
@@ -131,20 +131,20 @@
     };
     const saveToStorage = async () => {
         // NOTE: If saveToStorage gets called on the server then this will cause Vite to crash (so dont call it outside of any function)
-        await localforage.setItem("pm:filter-bar-open", $state.snapshot(filterBarOpened));
-        await localforage.setItem("pm:show-test-in-new", $state.snapshot(showingTestInNewProject));
-        await localforage.setItem("pm:sorting", $state.snapshot(selectedSorting));
-        await localforage.setItem("pm:filters-tags", $state.snapshot(tagsSelected));
-        await localforage.setItem("pm:filters-features", $state.snapshot(featuresSelected));
-        await localforage.setItem("pm:favorites", $state.snapshot(favoritedExtensions));
+        await localforage.setItem("gm:filter-bar-open", $state.snapshot(filterBarOpened));
+        await localforage.setItem("gm:show-test-in-new", $state.snapshot(showingTestInNewProject));
+        await localforage.setItem("gm:sorting", $state.snapshot(selectedSorting));
+        await localforage.setItem("gm:filters-tags", $state.snapshot(tagsSelected));
+        await localforage.setItem("gm:filters-features", $state.snapshot(featuresSelected));
+        await localforage.setItem("gm:favorites", $state.snapshot(favoritedExtensions));
     };
     const loadFromStorage = async () => {
-        const localFilterBarOpened =         (await localforage.getItem("pm:filter-bar-open")) || false;
-        const localShowingTestInNewProject = (await localforage.getItem("pm:show-test-in-new")) || false;
-        const localSelectedSorting =         (await localforage.getItem("pm:sorting")) || "none";
-        const localTagsSelected =            (await localforage.getItem("pm:filters-tags")) || {};
-        const localFeaturesSelected =        (await localforage.getItem("pm:filters-features")) || {};
-        const localFavoritedExtensions =     (await localforage.getItem("pm:favorites")) || {};
+        const localFilterBarOpened =         (await localforage.getItem("gm:filter-bar-open")) || false;
+        const localShowingTestInNewProject = (await localforage.getItem("gm:show-test-in-new")) || false;
+        const localSelectedSorting =         (await localforage.getItem("gm:sorting")) || "none";
+        const localTagsSelected =            (await localforage.getItem("gm:filters-tags")) || {};
+        const localFeaturesSelected =        (await localforage.getItem("gm:filters-features")) || {};
+        const localFavoritedExtensions =     (await localforage.getItem("gm:favorites")) || {};
         filterBarOpened = localFilterBarOpened;
         showingTestInNewProject = localShowingTestInNewProject;
         selectedSorting = localSelectedSorting;
@@ -209,7 +209,7 @@
             stateSearchBar.recommendations = shownExtensions.slice(0, 2);
         }
         
-        const event = new CustomEvent("penguinmod-recommendations-updated");
+        const event = new CustomEvent("gaiamod-recommendations-updated");
         document.dispatchEvent(event);
     });
     onMount(async () => {
@@ -217,7 +217,7 @@
         hasStorageBeenLoaded = true;
     });
     if (browser) {
-        document.addEventListener("penguinmod-search-bar-input", () => {
+        document.addEventListener("gaiamod-search-bar-input", () => {
             updateExtensionList();
         });
         updateExtensionList();
@@ -227,7 +227,7 @@
 <div class="top">
     <div class="header">
         <Logo />
-        <h1>PenguinMod Extra Extensions</h1>
+        <h1>GaiaMod Extra Extensions</h1>
     </div>
 </div>
 <div class="buffer">
@@ -236,14 +236,14 @@
         <p>
             To add an extension to your project, click the "Add to Project" button.
             You can also click the "Copy" button and
-            <a href="/load" target="_blank">load it into PenguinMod</a>
+            <a href="/load" target="_blank">load it into GaiaMod</a>
             if the former fails.
         </p>
     {:else}
         <p>
             To use some of these extensions in your projects, click the "Copy Link"
             button on an extension and
-            <a href="/load" target="_blank">load it into PenguinMod,</a>
+            <a href="/load" target="_blank">load it into GaiaMod,</a>
             or click the "Try it out" button to create a new project with the extension.
         </p>
     {/if}
@@ -374,7 +374,7 @@
 <div class="buffer">
     <p style="text-align: center;">
         Note: Some extensions may be added to the Extension Gallery in
-        PenguinMod Studio.
+        GaiaMod Studio.
         <br />
         If you cannot find an extension that was
         previously listed here, check there.
@@ -396,8 +396,8 @@
 
         user-select: none;
     }
-    :global(*[data-penguinmodsvelteui-threestatecheckbox="true"]),
-    :global(*[data-penguinmodsvelteui-checkbox="true"]) {
+    :global(*[data-gaiamodsvelteui-threestatecheckbox="true"]),
+    :global(*[data-gaiamodsvelteui-checkbox="true"]) {
         margin-right: 4px !important;
     }
 

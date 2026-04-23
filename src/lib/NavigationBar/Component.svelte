@@ -12,12 +12,12 @@
 
     const toggleTheme = () => {
         let isNowDark = false;
-        if (localStorage.getItem("pm:dark") !== "true") {
+        if (localStorage.getItem("gm:dark") !== "true") {
             isNowDark = true;
         }
-        localStorage.setItem("pm:dark", isNowDark);
+        localStorage.setItem("gm:dark", isNowDark);
         
-        const event = new CustomEvent("penguinmod-dark-updated", { detail: isNowDark });
+        const event = new CustomEvent("gaiamod-dark-updated", { detail: isNowDark });
         document.dispatchEvent(event);
     };
 
@@ -31,15 +31,15 @@
 
         if (props.onsearch) props.onsearch(searchTerm);
 
-        const event = new CustomEvent("penguinmod-search-bar-input", { detail: searchTerm });
+        const event = new CustomEvent("gaiamod-search-bar-input", { detail: searchTerm });
         document.dispatchEvent(event);
     };
     const recommendationClicked = (extension) => {
-        const event = new CustomEvent("penguinmod-recommendation-clicked", { detail: extension.code });
+        const event = new CustomEvent("gaiamod-recommendation-clicked", { detail: extension.code });
         document.dispatchEvent(event);
     };
     onMount(() => {
-        document.addEventListener("penguinmod-recommendations-updated", () => {
+        document.addEventListener("gaiamod-recommendations-updated", () => {
             if (!searchInput) return;
             searchInput.focus();
         });
@@ -51,7 +51,7 @@
 
 <div class="bar">
     <a class="logo" href="/">
-        <img class="logo-image" src="/navicon.png" alt="PenguinMod" />
+        <img class="logo-image" src="/navicon.png" alt="GaiaMod" />
     </a>
     <div style="margin-right: 12px;"></div>
     <BarPage style="padding:0.5rem" onclick={toggleTheme}>
@@ -92,10 +92,10 @@
 
 <style>
     :root {
-        --penguinmod-color: #00c3ff;
+        --gaiamod-color: hsla(240, 65%, 50%, 1);
     }
     :global(body.dark-mode) {
-        --penguinmod-color: #009ccc;
+        --gaiamod-color: hsla(240, 65%, 40%, 1);
     }
 
     .bar {
@@ -103,7 +103,7 @@
         width: 100%;
         left: 0px;
         top: 0px;
-        background: var(--penguinmod-color);
+        background: var(--gaiamod-color);
         height: 3rem;
         color: white;
         display: flex;
@@ -199,7 +199,7 @@
         top: calc(3rem - 0.4rem);
         width: 100%;
         padding: 0 8px;
-        background: var(--penguinmod-color);
+        background: var(--gaiamod-color);
         border: 1px solid #00000026;
         border-radius: 0;
         color: white;

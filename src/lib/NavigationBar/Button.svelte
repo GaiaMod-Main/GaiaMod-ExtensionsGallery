@@ -50,9 +50,9 @@
     .button-highlight {
         outline: 0px;
         background-color: white;
-        color: #00c3ff;
+        color: hsla(240, 65%, 50%, 1);
     }
     :global(body.dark-mode) .button-highlight {
-        color: #009ccc;
+        color: hsla(240, 65%, 40%, 1);
     }
 </style>

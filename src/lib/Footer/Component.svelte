@@ -6,18 +6,18 @@
     let displayedTheme = $state("light");
     const themeUpdate = (event) => {
         const isDark = event.target.value === "dark";
-        localStorage.setItem("pm:dark", isDark);
+        localStorage.setItem("gm:dark", isDark);
         
-        const customEvent = new CustomEvent("penguinmod-dark-updated", { detail: isDark });
+        const customEvent = new CustomEvent("gaiamod-dark-updated", { detail: isDark });
         document.dispatchEvent(customEvent);
     }
     const updateDisplayedTheme = () => {
-        const darkTheme = String(localStorage.getItem("pm:dark")) === "true";
+        const darkTheme = String(localStorage.getItem("gm:dark")) === "true";
         displayedTheme = darkTheme ? "dark" : "light";
     };
 
     if (browser) {
-        document.addEventListener("penguinmod-dark-updated", () => {
+        document.addEventListener("gaiamod-dark-updated", () => {
             updateDisplayedTheme();
         });
         updateDisplayedTheme();
@@ -27,7 +27,7 @@
 <div style="height: 24px"></div>
 <div class="footer">
     <span>
-        PenguinMod is not affiliated with TurboWarp, Scratch, the Scratch Team, or
+        GaiaMod is not affiliated with PenguinMod, TurboWarp, Scratch, the Scratch Team, or
         the Scratch Foundation.
     </span>
     <span>
@@ -38,19 +38,19 @@
 <div class="links">
     <a
         target="_blank"
-        href="https://github.com/PenguinMod/PenguinMod-ExtensionsGallery"
+        href="https://github.com/GaiaMod-Main/GaiaMod-ExtensionsGallery"
     >
         GitHub
     </a>
     <span style="margin: 0px 6px;">-</span>
     <a
         target="_blank"
-        href="https://github.com/PenguinMod/PenguinMod-ExtensionsGallery/blob/main/README.md"
+        href="https://github.com/GaiaMod-Main/GaiaMod-ExtensionsGallery/blob/main/README.md"
     >
         Submitting an extension
     </a>
     <span style="margin: 0px 6px;">-</span>
-    <a target="_blank" href="https://discord.gg/NZ9MBMYTZh">Discord</a>
+    <a target="_blank" href="https://discord.gg/fFnNT8RGav">Discord</a>
 </div>
 <div style="height: 12px"></div>
 <div class="footer">
