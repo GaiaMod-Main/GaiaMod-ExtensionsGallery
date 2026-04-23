@@ -6,42 +6,32 @@
 */
 export default [
     {
-        name: 'GaiaBlocks',
-        extensionId: 'https://gaiamod-main.github.io/GaiaBlocks.js',
-        iconURL: gaiaBlocksThumb,
-        description: 'Wonderful utility blocks! Modified by Gaia.',
-        featured: true,
-        extDeveloper: 'Gaia',
-        internetConnectionRequired: true,
-        disabled: false
+        name: "GaiaBlocks",
+        description: "Wonderful utility blocks! Modified by Gaia.",
+        code: "Gaia/GaiaBlocks.js",
+        banner: "Gaia/gaiablocks.png",
+        creator: "Gaia",
+        isGitHub: true,        
     },
     {
         name: 'GaiaAI',
-        extensionId: 'https://gaiamod-main.github.io/GaiaAI.js',
-        iconURL: gaiaAIThumb,
-        description: 'A modified version of Pang AI originally made by logise1123!',
-        credits: ['logise1123'],
-        extDeveloper: 'Gaia',
-        internetConnectionRequired: true,
-        featured: true
+        description: 'A modified version of Pang AI originally made by logise1123. Credits to him!',
+        code: "Gaia/GaiaAI.js",
+        banner: "Gaia/gaiaai.png",
+        creator: "Gaia",
     },
     {
         name: 'Prompts',
-        extensionId: 'https://gaiamod-main.github.io/GTPPrompts.js',
-        iconURL: promptsThumb,
         description: 'Prompts made for Gaia AI. Inspired by the prompts extension found in Snail-IDE.',
-        featured: true,
-        extDeveloper: 'Gaia',
-        disabled: false
+        code: "Gaia/GTPPrompts.js",
+        banner: "Gaia/prompts.png",
+        creator: "Gaia",
     },
     {
         name: 'Spinach Facts',
-        extensionId: 'https://gaiamod-main.github.io/SpinachFacts.js',
-        iconURL: spinachThumb,
-        extDeveloper: 'Gaia',
         description: 'An extension about spinach! Based on Gen1x\'s CATS, MrIncredibleMaker\'s DOGS and pooiod7\'s Raccoon Facts extensions.',
-        featured: true,
-        internetConnectionRequired: true,
-        disabled: false
+        code: "Gaia/SpinachFacts.js",
+        banner: "Gaia/spinach.png",
+        creator: "Gaia",
     },
 ];
