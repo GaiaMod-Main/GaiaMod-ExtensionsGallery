@@ -233,7 +233,7 @@
         {/if}
         {#if example}
             <p>
-                <a href={`https://studio.gaiamod.com/editor.html?project_url=${encodeURIComponent(`${$page.url.origin}/examples/projects/${example}`)}`}>
+                <a href={`https://gaiamod-main.github.io/editor.html?project_url=${encodeURIComponent(`${$page.url.origin}/examples/projects/${example}`)}`}>
                     Example Project
                 </a>
             </p>
