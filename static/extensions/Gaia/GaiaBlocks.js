@@ -66,6 +66,11 @@ blockIconURI: "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHR
             disableMonitor: true,
         },
           {
+            opcode: 'isPenguinMod',
+            blockType: Scratch.BlockType.BOOLEAN,
+            text: 'Is a PenguinMod fork?'
+          },
+          {
             opcode: 'loadExtension',
             blockType: Scratch.BlockType.COMMAND,
             text: 'load an extension from [TEXT]',
@@ -138,6 +143,12 @@ blockIconURI: "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHR
    closeTabDisabled() {
             return CloseTabDisabled;
    }
+    isPenguinMod() {
+      this.isem = Scratch.extensions.isPenguinMod
+    ? "true"  : "false";
+  return this.isem
+  
+    }
     restartProject() {
       vm.greenFlag();
     }
