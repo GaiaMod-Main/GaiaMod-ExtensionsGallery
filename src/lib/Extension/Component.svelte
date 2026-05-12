@@ -284,7 +284,7 @@
                     href={baseUrl + url}
                     target="_blank"
                 >
-                    <button class="purple">Try it out</button>
+                    <button class="purple">Try it out!</button>
                 </a>
             {/if}
         </div>

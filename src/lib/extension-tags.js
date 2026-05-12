@@ -49,6 +49,14 @@ export const Tags = [
         alias: "Algorithms and AI",
     },
     {
+        name: "iot",
+        alias: "Internet of Things",
+    },
+    {
+        name: "jokes",
+        alias: "Joke Extensions",
+    },
+    {
         name: "large",
         alias: "Large Extensions",
     },
