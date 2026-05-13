@@ -17,7 +17,7 @@ export default [
         name: 'GaiaGPT',
         description: 'A GaiaMod modification of Pang AI with more prompts.',
         code: "/GaiaWindWave90/GaiaGPT.js",
-        banner: "/GaiaWindWave90/GaiaGPT.svg",
+        banner: "/GaiaWindWave90/GaiaGPT.png",
         creator: "logise1123",
         isGitHub: true,
     },
