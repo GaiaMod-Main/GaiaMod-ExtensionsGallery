@@ -20,7 +20,7 @@
         • Open the Extensions Menu at the bottom left of the Editor.
     </p>
     <img
-        src="/examples/loadextensions/1.png"
+        src="examples/loadextensions/1.png"
         alt="Opening Extension Menu"
         style="width: 345px"
         loading="lazy"
@@ -36,13 +36,13 @@
         <br />
     </p>
     <img
-        src="/examples/loadextensions/2.png"
+        src="examples/loadextensions/2.png"
         alt="Opening the custom extension screen"
         style="width: 345px"
         loading="lazy"
     />
     <img
-        src="/examples/loadextensions/2-alt.png"
+        src="examples/loadextensions/2-alt.png"
         alt="Opening the custom extension screen on the sidebar"
         style="width: 345px"
         loading="lazy"
@@ -56,7 +56,7 @@
         • Paste in any extension URL you have copied from this website here.
     </p>
     <img
-        src="/examples/loadextensions/3.png"
+        src="examples/loadextensions/3.png"
         alt="Entering an extension URL to load a custom extension"
         style="width: 600px"
         loading="lazy"
