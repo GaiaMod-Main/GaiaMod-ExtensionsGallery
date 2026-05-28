@@ -236,14 +236,14 @@
         <p>
             To add an extension to your project, click the "Add to Project" button.
             You can also click the "Copy" button and
-            <a href="/load" target="_blank">load it into GaiaMod</a>
+            <a href="load" target="_blank">load it into GaiaMod</a>
             if the former fails.
         </p>
     {:else}
         <p>
             To use some of these extensions in your projects, click the "Copy Link"
             button on an extension and
-            <a href="/load" target="_blank">load it into GaiaMod,</a>
+            <a href="load" target="_blank">load it into GaiaMod,</a>
             or click the "Try it out" button to create a new project with the extension.
         </p>
     {/if}
