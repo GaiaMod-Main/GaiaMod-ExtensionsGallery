@@ -10,7 +10,7 @@ export default [
         name: "Gaia Utilities",
         description: "Wonderful utility blocks!",
         code: "GaiaWindWave90/GaiaBlocks.js",
-        banner: "GaiaWindWave90/gaiablocks.png",
+        banner: "GaiaWindWave90/GaiaUtilities.png",
         creator: "GaiaWindWave90 and other users",
         isGitHub: true,        
     },
