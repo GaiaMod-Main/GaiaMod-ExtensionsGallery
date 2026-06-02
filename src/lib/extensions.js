@@ -7,11 +7,11 @@
 
 export default [
     {
-        name: "GaiaBlocks",
+        name: "Gaia Utilities",
         description: "Wonderful utility blocks!",
         code: "GaiaWindWave90/GaiaBlocks.js",
         banner: "GaiaWindWave90/gaiablocks.png",
-        creator: "GaiaWindWave90",
+        creator: "GaiaWindWave90 and other users",
         isGitHub: true,        
     },
     {
