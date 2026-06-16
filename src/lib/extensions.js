@@ -23,14 +23,6 @@ export default [
         isGitHub: true,
     },
     {
-        name: "Runtime Tools",
-        description: "Blocks for modifying Scratch objects like Turbo Mode, stage size, clone limits, and more!",
-        code: "GaiaWindWave90/GaiaRuntime.js",
-        banner: "GaiaWindWave90/runtimeThumb.svg",
-        creator: "GaiaWindWave90",
-        isGitHub: true,        
-    },
-    {
         name: 'Prompts',
         description: 'Prompts made for Gaia AI. Inspired by the prompts extension found in Snail-IDE.',
         code: "GaiaWindWave90/GTPPrompts.js",
