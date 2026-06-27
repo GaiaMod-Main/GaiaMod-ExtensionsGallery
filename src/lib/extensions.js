@@ -62,12 +62,4 @@ export default [
         creator: "-SIPC-",
         isGitHub: true,        
     },
-    {
-        name: "Ding Dong Ditch",
-        description: "Some joke extension that I did for fun. Originally from my latest TurboWarp mod, MagicMod.",
-        code: "GaiaWindWave90/DingDongDitch.js",
-        banner: "GaiaWindWave90/DingDongDitch.svg",
-        creator: "GaiaWindWave90",
-        isGitHub: true,        
-    },
 ];
