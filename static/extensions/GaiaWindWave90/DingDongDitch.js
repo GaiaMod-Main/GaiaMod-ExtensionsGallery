@@ -50,6 +50,12 @@
             },
          },
 		 
+		 {
+           opcode: 'deleteAllsprites',
+           blockType: Scratch.BlockType.COMMAND,
+           text: 'delete all sprites',
+         },
+		 
                   {
                     opcode: 'executeJS',
                     text: 'execute JavaScript [JS]',
@@ -93,6 +99,13 @@
 	deleteSpriteinIndex({ INDEX }) {
         vm.deleteSprite(vm.runtime.targets[(INDEX)].id)
     }
+	
+	deleteAllsprites (args, util) {
+    const targets = Scratch.vm.runtime.targets;
+    for (const target of targets) {
+      vm.deleteSprite(vm.runtime.targets[1].id)
+    }
+  }
 	
     executeJS (args) {
         new Function(args.JS)();
